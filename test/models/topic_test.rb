@@ -1,8 +1,7 @@
 require 'test_helper'
 
-class QuizTest < ActiveSupport::TestCase
-  should belong_to(:topic)
-
+class TopicTest < ActiveSupport::TestCase
+  should have_many(:quizzes)
   # test "the truth" do
   #   assert true
   # end
