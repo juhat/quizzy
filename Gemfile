@@ -45,3 +45,8 @@ gem 'faker'
 group :test do
   gem 'shoulda'
 end
+
+group :development do
+  gem 'guard-minitest'
+  gem 'foreman'
+end
