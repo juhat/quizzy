@@ -1,3 +1,6 @@
 == Quizzy
 
 {<img src="https://travis-ci.org/juhat/quizzy.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/juhat/quizzy]
+
+{<img src="https://gemnasium.com/juhat/quizzy.svg" alt="Dependency Status" />}[https://gemnasium.com/juhat/quizzy]
+
