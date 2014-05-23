@@ -9,4 +9,4 @@
 Topic.delete_all
 Quiz.delete_all
 
-FactoryGirl.create_list(:quiz, 20)
+FactoryGirl.create_list(:topic_with_quizzes, 5, quiz_count: 10)

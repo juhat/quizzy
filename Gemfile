@@ -21,6 +21,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
+
+gem 'bootstrap-sass', '~> 3.1.1'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',          group: :doc
 
@@ -49,4 +52,6 @@ end
 group :development do
   gem 'guard-minitest'
   gem 'foreman'
+  gem 'rack-livereload'
+  gem 'guard-livereload', require: false
 end
