@@ -29,6 +29,7 @@ Congrat!
 - write tested code, tests first
 - use factories: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
 - use the Shoulda doc: https://github.com/thoughtbot/shoulda-matchers
+- use Capybara for integration tests: https://github.com/jnicklas/capybara
 - send pull request (Travis will run the tests)
 
 == Architechture
