@@ -4,6 +4,18 @@
 
 {<img src="https://gemnasium.com/juhat/quizzy.svg" alt="Dependency Status" />}[https://gemnasium.com/juhat/quizzy]
 
+== Overview
+
+Quizzy is a quiz game. 
+It helps you to became a master in a topic. 
+As you solve quizzes you will be asked to write new ones. 
+So it is a growing knowledge base.
+
+=== The science behind
+If you are able to correctly answer to a question in 4 following days then you learned it for forever.
+You successfully saved it into your short-middle-long term memory.
+Congrat!
+
 == Getting started
 
 - clone
