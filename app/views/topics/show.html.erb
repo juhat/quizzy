@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @topic.name %>
-</p>
+<h1><%= @topic.name %></h1>
 
 <p>
   <strong>Quizzes:</strong>
-  <%= @topic.quizzes.map(&:question).join(', ') %>
+  <%= @topic.quizzes.limit(5).map(&:question).join(', ') %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<br>
+
+<div class="text-center">
+  <%= link_to 'Start playing!', root_path, class: 'btn btn-success btn-lg' %>
+</div>
