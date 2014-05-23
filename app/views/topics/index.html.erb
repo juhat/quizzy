@@ -1,25 +1,11 @@
-<h1>Listing topics</h1>
+<h1>What's your topic?</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<ul class="list-group">
     <% @topics.each do |topic| %>
-      <tr>
-        <td><%= topic.name %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li class="list-group-item">
+        <h2><%= link_to topic.name, topic %></h2>
+        <span class="badge"><%= topic.quizzes.count %></span>
+        <%= topic.quizzes.limit(5).map(&:question).join(' ') %>
+      </li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
+</ul>

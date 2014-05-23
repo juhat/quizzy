@@ -47,11 +47,14 @@ gem 'faker'
 
 group :test do
   gem 'shoulda'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
 end
 
 group :development do
   gem 'guard-minitest'
   gem 'foreman'
-  gem 'rack-livereload'
-  gem 'guard-livereload', require: false
+  gem 'rack-livereload', git: 'https://github.com/johnbintz/rack-livereload.git'
+  gem 'guard-livereload', require: false, git: 'https://github.com/guard/guard-livereload.git'
+  gem 'thin'
 end
