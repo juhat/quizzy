@@ -45,6 +45,8 @@ gem 'debugger', group: [:development, :test]
 gem 'factory_girl_rails'
 gem 'faker'
 
+gem 'thin'
+
 group :test do
   gem 'shoulda'
   gem 'minitest-rails'
@@ -56,5 +58,4 @@ group :development do
   gem 'foreman'
   gem 'rack-livereload', git: 'https://github.com/johnbintz/rack-livereload.git'
   gem 'guard-livereload', require: false, git: 'https://github.com/guard/guard-livereload.git'
-  gem 'thin'
 end
