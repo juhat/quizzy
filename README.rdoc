@@ -22,7 +22,7 @@ Congrat!
 - rake db:create
 - rake db:migrate
 - rake db:seed
-- foreman start
+- foreman start -f Procfile.dev
 
 == Workflow
 - fork the project and create a branch for the new feature
