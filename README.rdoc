@@ -1,6 +1,29 @@
-== Quizzy
+= Quizzy
 
 {<img src="https://travis-ci.org/juhat/quizzy.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/juhat/quizzy]
 
 {<img src="https://gemnasium.com/juhat/quizzy.svg" alt="Dependency Status" />}[https://gemnasium.com/juhat/quizzy]
+
+== Getting started
+
+- clone
+- rake db:create
+- rake db:migrate
+- rake db:seed
+- foreman start
+
+== Workflow
+- fork the project and create a branch for the new feature
+- write tested code, tests first
+- use factories: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
+- use the Shoulda doc: https://github.com/thoughtbot/shoulda-matchers
+- send pull request (Travis will run the tests)
+
+== Architechture
+- Rails 4, Bootstrap 3, Postgresql
+- LiveReload configured so any changes on assets loads automatically
+- Foreman runs Guard so your tests runs automatically
+
+== Credits
+Attila Juhász from [App Maintainers](http://AppMaintainers.com)
 
