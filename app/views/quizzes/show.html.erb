@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
+<h2><%= @quiz.question %></h2>
 
-<p>
-  <strong>Question:</strong>
-  <%= @quiz.question %>
-</p>
+<%= form_for([@quiz.topic, @quiz]) do |f| %>
+    <div class="field">
+      <%= f.label :good_answer %><br>
+      <%= f.check_box :good_answer %>
+    </div>
+    <div class="field">
+      <%= f.label :bad_answer %><br>
+      <%= f.check_box :bad_answer %>
+    </div>
+    <div class="actions">
+      <%= f.submit("Yes\"", class: 'btn btn-success') %>
+    </div>
+<% end %>
 
-<p>
-  <strong>Good answer:</strong>
-  <%= @quiz.good_answer %>
-</p>
-
-<p>
-  <strong>Bad answer:</strong>
-  <%= @quiz.bad_answer %>
-</p>
-
-<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
-<%= link_to 'Back', quizzes_path %>
+<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>

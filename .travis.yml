@@ -1,8 +1,16 @@
 language: ruby
 rvm:
-  - 2.1.1
+- 2.1.1
 before_script:
-  - cp config/database_for_travis.yml config/database.yml
-  - RAILS_ENV=test bundle exec rake db:create
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-script: "RAILS_ENV=test bundle exec rake test"
+- cp config/database_for_travis.yml config/database.yml
+- RAILS_ENV=test bundle exec rake db:create
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+script: RAILS_ENV=test bundle exec rake test
+deploy:
+  provider: heroku
+  api_key:
+    secure: F8EhNVwb0g9lH1gJjDOYvwBtbgyRCUM/LkivB9Dobq0tWmWK32s+8H47yLCtnqVpDpECDeyTf3BIJTffjbzP2K+uXfRy7+599B61txT95Wn+8tf7oLBzTwtiTxGa6uvF9PLcyFO2O9ZszJNMYq/Ac/rROKuA8X0GizdLCaO3Vkg=
+  app: quizzes-staging
+  on:
+    repo: juhat/quizzy
+#    branch: answering
