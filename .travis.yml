@@ -13,4 +13,4 @@ deploy:
   app: quizzes-staging
   on:
     repo: juhat/quizzy
-#    branch: answering
+    branch: master
