@@ -18,4 +18,5 @@ deploy:
     branch: master
     run:
       - "rake db:migrate"
+      - "rake db:seed"
       - restart
