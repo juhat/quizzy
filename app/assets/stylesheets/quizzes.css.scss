@@ -28,9 +28,24 @@ body {
   margin-bottom: 2em;
 
   .correct{
-    background: green;
+    background: green !important;
+    color: white;
+    font-weight: bold;
+    opacity: 1 !important;
   }
   .incorrect{
-    background: red;
+    background: red !important;
+    color: white;
+    opacity: 1 !important;
+  }
+  .not-selected-correct{
+    color: green;
+    border-color: green;
+    opacity: 1 !important;
+  }
+  .not-selected-incorrect{
+    color: red;
+    border-color: red;
+    opacity: 1 !important;
   }
 }
