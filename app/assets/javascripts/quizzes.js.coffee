@@ -5,19 +5,15 @@
 jQuery ($) ->
   $('.quiz-answer').on 'click', (event) ->
     # saving if the answer is correct
+    $('.quiz-answer').prop('disabled', true)
     if ($(this).attr('data-correctness') == "1")
       correct = 1
+      $(this).addClass('correct bounceIn animated')
+      $("button[data-correctness='0']").addClass('not-selected-incorrect')
     else
       correct = 0
-
-    # displaying answer colors and disable them
-    $('.quiz-answer').each (num) ->
-      element = $( $('.quiz-answer')[num] )
-      if element.attr('data-correctness') == "1"
-        element.addClass('correct')
-      else
-        element.addClass('incorrect')
-    $('.quiz-answer').prop('disabled', true)
+      $(this).addClass('incorrect shake animated')
+      $("button[data-correctness='1']").addClass('not-selected-correct')
 
     # showing next button
     $(this).siblings('a.quiz-forward').show()
