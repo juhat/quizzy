@@ -27,9 +27,10 @@ jQuery ($) ->
 
     $.ajax({
       url: $('h1').first().attr('data-url'),
-      type: 'POST'
+      type: 'PUT'
       dataType: 'json',
-      data: {answer: correct},
-      success: (response) -> ,
-      error: ->
+      data: {answer: correct}
+      #    ,
+      #      success: (response) ->,
+      #      error: ->
     })

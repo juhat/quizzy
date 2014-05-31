@@ -35,7 +35,7 @@ class QuizzesControllerTest < ActionController::TestCase
   end
 
   test "should update quiz" do
-    patch :update, topic_id: @topic, id: @quiz, quiz: { bad_answer: @quiz.bad_answer, good_answer: @quiz.good_answer, question: @quiz.question }
+    patch :update, topic_id: @topic, id: @quiz, quiz: { answer: "1" }
     assert_redirected_to topic_quiz_path(assigns(:quiz), assigns(:quiz).topic)
   end
 
