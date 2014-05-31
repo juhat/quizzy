@@ -4,6 +4,8 @@ class TopicsControllerTest < ActionController::TestCase
   setup do
     @topics = create_list(:topic, 20)
     @topic = @topics.first
+    @user = create(:user)
+    sign_in @user
   end
 
   test "should get index" do

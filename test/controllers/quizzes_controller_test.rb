@@ -5,6 +5,8 @@ class QuizzesControllerTest < ActionController::TestCase
     @topic = create(:topic_with_quizzes, quiz_count: 20)
     @quizzes = @topic.quizzes
     @quiz = @quizzes.first
+    @user = create(:user)
+    sign_in @user
   end
 
   # test "should get index" do

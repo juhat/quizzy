@@ -7,8 +7,15 @@ jQuery ($) ->
     # saving if the answer is correct
     if ($(this).attr('data-correctness') == "1")
       correct = 1
+      mySound = soundManager.createSound({
+        url: "/assets/applause-8.mp3"
+      })
     else
       correct = 0
+      mySound = soundManager.createSound({
+        url: "/assets/vomiting-01.mp3"
+      })
+    mySound.play()
 
     # displaying answer colors and disable them
     $('.quiz-answer').each (num) ->
