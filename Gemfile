@@ -46,6 +46,7 @@ gem 'factory_girl_rails'
 gem 'faker'
 
 gem 'thin'
+gem 'devise'
 
 group :test do
   gem 'shoulda'
