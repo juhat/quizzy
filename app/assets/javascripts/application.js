@@ -16,3 +16,29 @@
 //= require bootstrap
 //= require_tree .
 
+$(document).ready(function(){
+
+    $('.answer-right').click(function() {
+        $(this).flip({
+            direction: 'lr',
+            color: 'green',
+            content: 'Yeah, righ! Nice one.',
+            speed: '100',
+            onEnd: function(){
+                $('.answer-right').css('color', 'white');
+            }
+        });
+    });
+    $('.answer-wrong').click(function() {
+        $(this).flip({
+            direction: 'lr',
+            color: 'red',
+            content: 'Uhhh... Next time! :(',
+            speed: '100',
+            onEnd: function(){
+                $('.answer-wrong').css('color', 'white');
+            }
+        });
+    });
+
+});
