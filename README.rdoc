@@ -38,5 +38,5 @@ Congrat!
 - Foreman runs Guard so your tests runs automatically
 
 == Credits
-Attila Juhász from http://AppMaintainers.com
+Attila Juhász and the Team from http://AppMaintainers.com
 
