@@ -12,7 +12,7 @@ class QuizzesController < ApplicationController
       # puts 'WHAT'
       # puts @topic.quizzes.all.inspect
       # puts @topic.inspect
-      redirect_to topic_quiz_path(id: @topic.quizzes.first, topic_id: @topic)
+      redirect_to topic_quiz_path(id: @topic.quizzes.shuffle.first, topic_id: @topic)
     end
   end
 

@@ -1,18 +1,14 @@
-<h2><%= @quiz.question %></h2>
+<ol class="breadcrumb">
+  <li><%= link_to "Quizzy", root_path %></li>
+  <li><%= link_to @quiz.topic.name, @topic, class: 'active' %></li>
+</ol>
 
-<%= form_for([@quiz.topic, @quiz]) do |f| %>
-    <div class="field">
-      <%= f.label :good_answer %><br>
-      <%= f.check_box :good_answer %>
-    </div>
-    <div class="field">
-      <%= f.label :bad_answer %><br>
-      <%= f.check_box :bad_answer %>
-    </div>
-    <div class="actions">
-      <%= f.submit("Yes\"", class: 'btn btn-success') %>
-    </div>
+<h1 data-url="<%= topic_quiz_path(@quiz.topic, @quiz) %>"><%= @quiz.question %></h1>
+
+<% [:good, :bad].shuffle.each do |answer| %>
+    <button type="button" class="quiz-answer btn btn-default btn-lg btn-block" data-correctness="<%= answer == :good ? 1 : 0 %>"><%= answer == :good ? @quiz.good_answer : @quiz.bad_answer %></button>
 <% end %>
 
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+<br>
+
+<%= link_to "Next question", topic_quizzes_path(@quiz.topic), class: 'quiz-forward btn btn-default btn-lg btn-block', style: "display:none" %>
