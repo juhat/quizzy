@@ -47,6 +47,7 @@ gem 'faker'
 
 gem 'thin'
 gem 'devise'
+gem 'soundmanager-rails'
 
 group :test do
   gem 'shoulda'

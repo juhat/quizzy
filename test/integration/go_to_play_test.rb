@@ -1,8 +1,12 @@
 require 'test_helper'
+include Warden::Test::Helpers
+Warden.test_mode!
 
 class GoToPlayTest < Capybara::Rails::TestCase
   setup do
     @topics = create_list(:topic_with_quizzes, 20, quiz_count: 20)
+    user = create(:user)
+    login_as(user, scope: :user)
   end
 
   test "Home page" do
