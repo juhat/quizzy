@@ -45,14 +45,11 @@ class QuizzesController < ApplicationController
   # PATCH/PUT /quizzes/1
   # PATCH/PUT /quizzes/1.json
   def update
+    answer = current_user.answers.create!(quiz: @quiz, correctness: (params[:answer].to_i > 0) )
+
     respond_to do |format|
-      if @quiz.update(quiz_params)
-        format.html { redirect_to topic_quiz_path(@quiz, @quiz.topic), notice: 'Quiz was successfully updated.' }
-        format.json { render :show, status: :ok, location: topic_quiz_path(@quiz, @quiz.topic) }
-      else
-        format.html { render :edit }
-        format.json { render json: @quiz.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to topic_quiz_path(@quiz, @quiz.topic), notice: 'Your answer is saved.' }
+      format.json { render :show, status: :ok, location: topic_quiz_path(@quiz, @quiz.topic) }
     end
   end
 
